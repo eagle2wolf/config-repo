@@ -1,0 +1,19 @@
+#统一配置中心会根据服务名order及profile名dev拉取到order.yml和order-dev.yml两个配置，并合并，
+#所以order.yml的配置中应写一些公用配置。将其他各环境私有配置去掉。
+# spring:
+#   application:
+#     name: order
+#   datasource:
+#     driver-class-name: oracle.jdbc.OracleDriver
+#     url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+#     username: qlh_spring_cloud
+#     password: 888888
+#     jpa:
+#       show-sql: true
+#由于springboot加载先进行eureka注册，再找到CONFIG服务地址拉取服务配置。
+#如果eureka默认地址改变，此服务将不能进行注册及找到CONFIG服务地址（会找默认8888的config端口地址）拉取服务。
+#所以不要将eureka地址配置放到远端git上，应放到服务自身配置中。
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:8761/eureka/
