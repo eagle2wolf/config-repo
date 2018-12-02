@@ -16,7 +16,7 @@ spring:
 #     service-url:
 #       defaultZone: http://localhost:8761/eureka/
 env:
-  test1
+  test
 girl: #前缀配置调用
   name: lili
   age: 20
