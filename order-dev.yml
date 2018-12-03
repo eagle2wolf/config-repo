@@ -19,4 +19,4 @@ env:
   dev
 girl: #前缀配置调用
   name: lili
-  age: 25
+  age: 20
