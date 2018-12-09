@@ -8,6 +8,11 @@ spring:
     password: 888888
     jpa:
       show-sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
 #由于springboot加载先进行eureka注册，再找到CONFIG服务地址拉取服务配置。
 #如果eureka默认地址改变，此服务将不能进行注册及找到CONFIG服务地址（会找默认8888的config端口地址）拉取服务。
 #所以不要将eureka地址配置放到远端git上，应放到服务自身配置中。
