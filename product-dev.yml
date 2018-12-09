@@ -1,0 +1,9 @@
+spring:
+  application:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+    username: qlh_spring_cloud
+    password: 888888
+  jpa:
+    show-sql: true
