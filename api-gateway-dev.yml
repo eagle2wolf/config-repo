@@ -1,0 +1,22 @@
+zuul:
+  routes:
+    # 此处的名字可以自定义
+    myProduct:
+    # /myProduct/product/list -> /product/product/list
+    path: /myProduct/**
+    serviceId: product
+    #不过滤cookie，只需设置为空（默认有值）
+    sensitiveHeaders:
+    # 简介写法
+    #product: /myProduct/**
+  # 排除某些路由
+  ignored-patterns:
+  # Set 格式写法，禁止访问
+  #- /product/product/listForOrder
+  #- /myProduct/product/listForOrder
+  # 也可用通配符
+  - /**/product/listForOrder
+# 查看路由权限
+management:
+  security:
+    enabled: false
